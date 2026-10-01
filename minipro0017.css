@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(160deg, #2c2626, #000000);
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #180cc7;
+    filter: blur(150px);
+    opacity: 0.15;
+    top: -100px;
+    left: -100px;
+    z-index: -1;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100dvh;
+    padding: 60px;
+    max-width: 1100px;
+    margin-inline: auto;
+    gap: 40px;
+}
+
+.hero-left {
+    max-width: 500px;
+    animation: fadeUp 1s ease;
+}
+
+.intro {
+    color: #9b0707;
+    font-weight: bold;
+}
+
+.hero-name {
+    font-size:48px;
+    margin: 10px 0;
+}
+
+.hero-skills {
+    font-size: 20px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.botons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform .3s;
+}
+
+.primary {
+    background: linear-gradient(135deg, #00f5a0, #00d9f5);
+    color: black;
+}
+
+.secondary {
+    border: 1px solid #ffffff33;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.stats {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat strong {
+    font-size: 20px;
+}
+
+.stat span {
+    display: block;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 400px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    mask-image: linear-gradient(black 95%, transparent);
+    position: relative;
+    z-index: 2;
+}
+
+.circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #770303, #c52020);
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    filter: blur(50px);
+    opacity: 0.8;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
